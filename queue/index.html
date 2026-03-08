@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a192f", // Midnight Blue
+                        "accent": "#d4af37", // Gold
+                        "accent-hover": "#b8860b", // Darker Gold
+                        "background-light": "#f8fafc",
+                        "cream": "#fdfbf7",
+                        "midnight": "#0a192f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .blur-reveal {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .soft-blue-shadow {
+            box-shadow: 0 10px 30px -10px rgba(10, 25, 47, 0.15);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #0a192f 0%, #1e3a8a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background-light font-display text-slate-900 antialiased">
+<div class="bg-midnight text-white py-2.5 px-6 md:px-12 flex justify-between items-center text-sm font-medium">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 hover:text-accent transition-colors" href="tel:0784792291">
+<span class="material-symbols-outlined text-[18px]">call</span>
+            07 84 79 22 91
+        </a>
+<a class="flex items-center gap-2 hover:text-accent transition-colors" href="mailto:ruizdiazobrassl@hotmail.com">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+            ruizdiazobrassl@hotmail.com
+        </a>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<span class="text-white/80 tracking-wide">Expertise Rénovation Paris &amp; Ile-de-France</span>
+</div>
+</div>
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 px-6 md:px-12 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-midnight p-2 rounded-lg">
+<span class="material-symbols-outlined text-accent text-2xl">home_repair_service</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-midnight text-xl font-black tracking-tight leading-none">RUIZ DIAZ</h1>
+<span class="text-[10px] font-bold tracking-[0.2em] text-accent">OBRAS SL</span>
+</div>
+</div>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="text-slate-600 hover:text-midnight font-bold text-sm uppercase tracking-wider transition-colors" href="#">Accueil</a>
+<a class="text-slate-600 hover:text-midnight font-bold text-sm uppercase tracking-wider transition-colors" href="#">Réalisations</a>
+<a class="text-slate-600 hover:text-midnight font-bold text-sm uppercase tracking-wider transition-colors" href="#">Tous Corps d'État</a>
+<a class="text-slate-600 hover:text-midnight font-bold text-sm uppercase tracking-wider transition-colors" href="#">Expertise</a>
+<a class="text-slate-600 hover:text-midnight font-bold text-sm uppercase tracking-wider transition-colors" href="#">Contact</a>
+</nav>
+<button class="bg-accent hover:bg-accent-hover text-white font-black px-7 py-3 rounded-full transition-all shadow-lg hover:shadow-accent/20 text-sm uppercase tracking-widest">
+            Devis Gratuit
+        </button>
+</div>
+</header>
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-midnight/50 z-10"></div>
+<div class="absolute inset-0 z-0">
+<img alt="Luxe Paris Renovation" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2dYd35ikMe43KIe7Yk6Ry-ClKZf8SqU3DhOD_TDR13fcGGCsvgKZpQTTa34Pkv3AXiKLomisfjT-N94oc03tEbEoFHccL38rmmuNrVhGZRkNRpMISZrPw4A-BRi6apcFCh7NKtOkbRVeEXSKYQBy83wCNxXpE4IiR9Mv5CgR9RduMnpYjkMFlgaWDOr4y94VeTxkD9Ojh-ag5fsEHS-iid9smPvJrNk9MEI-CDr5a8_eWjLryhLbDMHb9hqlcfLykNGNe4UP0xyrk"/>
+</div>
+<div class="relative z-20 text-center px-4 max-w-5xl mx-auto">
+<div class="inline-flex gap-4 mb-10">
+<span class="bg-white/15 backdrop-blur-md text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] border border-white/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-sm">construction</span> Tous Corps d'État
+            </span>
+<span class="bg-white/15 backdrop-blur-md text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] border border-white/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-sm">verified_user</span> Garantie Décennale
+            </span>
+</div>
+<h1 class="text-white text-5xl md:text-8xl font-black leading-[1.05] mb-10 drop-shadow-2xl">
+            La Rénovation <br/> <span class="text-accent">d'Excellence</span> à Paris &amp; IDF
+        </h1>
+<p class="text-white/95 text-xl md:text-2xl mb-12 font-medium max-w-3xl mx-auto leading-relaxed">
+            Sublimez votre patrimoine avec un partenaire de confiance. 
+            Maîtrise artisanale et finitions haute couture pour vos projets immobiliers.
+        </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-accent hover:bg-accent-hover text-white font-black px-12 py-6 rounded-full text-lg shadow-2xl transition-all transform hover:-translate-y-1 uppercase tracking-widest">
+                Demander mon devis
+            </button>
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-bold px-12 py-6 rounded-full text-lg transition-all uppercase tracking-widest">
+                Nos Projets
+            </button>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full leading-[0] z-20">
+<svg class="relative block w-full h-[80px]" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path class="fill-background-light" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.43,147.3,126,221.33,110.3c54.17-11.48,107.61-31.47,166-41.47Z"></path>
+</svg>
+</div>
+</section>
+<section class="bg-background-light py-10 border-b border-slate-200">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-wrap justify-center md:justify-around items-center gap-10">
+<div class="flex items-center gap-4">
+<div class="flex text-accent">
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+</div>
+<p class="text-sm italic text-slate-600">"Excellence et ponctualité à Paris." <span class="font-bold text-midnight">— Marc L.</span></p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex text-accent">
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+</div>
+<p class="text-sm italic text-slate-600">"Une rénovation totale sans aucun stress." <span class="font-bold text-midnight">— Sophie R.</span></p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex text-accent">
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+<span class="material-symbols-outlined fill-1 text-[20px]">star</span>
+</div>
+<p class="text-sm italic text-slate-600">"Matériaux nobles et finitions parfaites." <span class="font-bold text-midnight">— Jean D.</span></p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 md:px-12 bg-white relative">
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="text-center mb-20">
+<h2 class="text-midnight text-4xl md:text-5xl font-black mb-6">En finir avec les tracas de la rénovation</h2>
+<p class="text-slate-500 text-lg max-w-2xl mx-auto">Nous apportons des solutions concrètes aux défis majeurs de vos chantiers.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="blur-reveal p-10 rounded-3xl border border-slate-100 soft-blue-shadow group hover:border-accent/30 transition-all">
+<span class="material-symbols-outlined text-accent bg-accent/10 p-4 rounded-2xl mb-6 group-hover:scale-110 transition-transform">timer</span>
+<h3 class="text-xl font-bold text-midnight mb-3">Délais non respectés</h3>
+<p class="text-slate-600 leading-relaxed">Nous garantissons contractuellement la date de livraison de votre chantier.</p>
+</div>
+<div class="blur-reveal p-10 rounded-3xl border border-slate-100 soft-blue-shadow group hover:border-accent/30 transition-all">
+<span class="material-symbols-outlined text-accent bg-accent/10 p-4 rounded-2xl mb-6 group-hover:scale-110 transition-transform">account_balance_wallet</span>
+<h3 class="text-xl font-bold text-midnight mb-3">Surcoûts imprévus</h3>
+<p class="text-slate-600 leading-relaxed">Prix fermes et définitifs. Pas de mauvaises surprises après signature.</p>
+</div>
+<div class="blur-reveal p-10 rounded-3xl border border-slate-100 soft-blue-shadow group hover:border-accent/30 transition-all">
+<span class="material-symbols-outlined text-accent bg-accent/10 p-4 rounded-2xl mb-6 group-hover:scale-110 transition-transform">military_tech</span>
+<h3 class="text-xl font-bold text-midnight mb-3">Qualité Aléatoire</h3>
+<p class="text-slate-600 leading-relaxed">Une équipe d'artisans d'élite pour des finitions haut de gamme irréprochables.</p>
+</div>
+<div class="blur-reveal p-10 rounded-3xl border border-slate-100 soft-blue-shadow group hover:border-accent/30 transition-all">
+<span class="material-symbols-outlined text-accent bg-accent/10 p-4 rounded-2xl mb-6 group-hover:scale-110 transition-transform">support_agent</span>
+<h3 class="text-xl font-bold text-midnight mb-3">Absence de Suivi</h3>
+<p class="text-slate-600 leading-relaxed">Un chef de projet dédié pour une communication fluide au quotidien.</p>
+</div>
+<div class="blur-reveal p-10 rounded-3xl border border-slate-100 soft-blue-shadow group hover:border-accent/30 transition-all">
+<span class="material-symbols-outlined text-accent bg-accent/10 p-4 rounded-2xl mb-6 group-hover:scale-110 transition-transform">health_and_safety</span>
+<h3 class="text-xl font-bold text-midnight mb-3">Stress de Gestion</h3>
+<p class="text-slate-600 leading-relaxed">Coordination intégrale de tous les corps d'état pour votre sérénité.</p>
+</div>
+<div class="blur-reveal p-10 rounded-3xl border border-slate-100 soft-blue-shadow group hover:border-accent/30 transition-all">
+<span class="material-symbols-outlined text-accent bg-accent/10 p-4 rounded-2xl mb-6 group-hover:scale-110 transition-transform">diamond</span>
+<h3 class="text-xl font-bold text-midnight mb-3">Choix Complexes</h3>
+<p class="text-slate-600 leading-relaxed">Conseils personnalisés sur les matériaux les plus nobles et durables.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gradient-to-b from-background-light to-white">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="flex flex-col lg:flex-row items-center gap-20 mb-32">
+<div class="w-full lg:w-1/2">
+<div class="relative">
+<img alt="Haussmannian Renovation" class="rounded-[2rem] shadow-[0_20px_50px_rgba(10,25,47,0.1)] object-cover aspect-[4/3] w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsTDJe172RKATIdDvD7qaqX33ybWkLpnqLOF9erZlZb-aBtkDtU8gYm3q33lRofyn-KQ6d3cqvDtC4nmPA663ii1yQleUuJc3aqOKOA0SFGehtpKBVySs2fP5-jTKJcgMV5Tf9eOj1GMpS4v535eifln4f2oXzHqwnITJ7Zls4zN7z8T2uDsMNx3SgpqTzU_m5b12eCH-sIzjZt5XOXA8cSej9hk_pjmJY46Mlyq7IFTrwqQMQm-YEHjMMN4vYSwgn_YCK4vLQNMrI"/>
+<div class="absolute -bottom-8 -right-8 bg-midnight p-8 rounded-2xl shadow-2xl hidden md:block border-t-4 border-accent">
+<p class="text-accent font-black text-2xl">Qualité Prestige</p>
+<p class="text-white/70 font-bold uppercase tracking-widest text-xs mt-1">Matériaux d'Exception</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<span class="text-accent font-black tracking-[0.3em] uppercase text-xs mb-6 block">Le Savoir-Faire Ruiz Diaz</span>
+<h2 class="text-midnight text-4xl md:text-6xl font-black mb-8 leading-[1.1]">La rigueur d'une <span class="text-accent">conception sur-mesure</span>.</h2>
+<p class="text-slate-600 text-lg mb-10 leading-relaxed">
+                    Spécialistes de la rénovation à Paris, nous comprenons les spécificités des appartements anciens et modernes. Notre approche combine respect du bâti et innovations contemporaines pour créer des espaces de vie uniques.
+                </p>
+<ul class="space-y-5 mb-12">
+<li class="flex items-center gap-4 text-slate-800 font-bold">
+<span class="material-symbols-outlined text-accent">check_circle</span> Étude technique approfondie
+                    </li>
+<li class="flex items-center gap-4 text-slate-800 font-bold">
+<span class="material-symbols-outlined text-accent">check_circle</span> Sélection d'artisans compagnons
+                    </li>
+</ul>
+<button class="flex items-center gap-3 text-midnight font-black hover:gap-5 transition-all group uppercase tracking-widest text-sm">
+                    Découvrir notre expertise <span class="material-symbols-outlined text-accent group-hover:translate-x-1 transition-transform">trending_flat</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row-reverse items-center gap-20">
+<div class="w-full lg:w-1/2">
+<div class="relative">
+<img alt="Modern Kitchen Result" class="rounded-[2rem] shadow-[0_20px_50px_rgba(10,25,47,0.1)] object-cover aspect-[4/3] w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuebZYM9zN5PA7GACASTW4D0JvQjYdB_mNVdW4UdrFf5Wswyw92Z_xv_mCDVfp59RP3BH4BjJFrUWNfjz0e-wSnL3H6HuBT9bli_ibo_FCMetnrPv93DUZrNCRcMLFK08JFRc9a1qm5ns57qx4tmQmfWBXKxblxGdTWRVV_gpAKu3yijyohqGYxueUA-eDto4oaqGAm9t008m5JGBKRdX_w3UwQeYZnX6Ki-XbN7GyGybA5Gop7wjFXCD1cistpk2qWiVipRophZwa"/>
+<div class="absolute -top-8 -left-8 bg-accent p-8 rounded-2xl shadow-2xl hidden md:block">
+<p class="text-white font-black text-2xl">Sérénité Absolue</p>
+<p class="text-white/90 font-bold uppercase tracking-widest text-xs mt-1">Livraison Clé en Main</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<span class="text-accent font-black tracking-[0.3em] uppercase text-xs mb-6 block">Accompagnement VIP</span>
+<h2 class="text-midnight text-4xl md:text-6xl font-black mb-8 leading-[1.1]">Votre projet orchestré <span class="text-accent">sans fausse note</span>.</h2>
+<p class="text-slate-600 text-lg mb-10 leading-relaxed">
+                    De la démolition aux dernières finitions de peinture, Ruiz Diaz Obras SL pilote chaque étape. Vous n'avez qu'un seul interlocuteur pour gérer l'électricité, la plomberie et l'agencement, garantissant une cohérence parfaite.
+                </p>
+<ul class="space-y-5 mb-12">
+<li class="flex items-center gap-4 text-slate-800 font-bold">
+<span class="material-symbols-outlined text-accent">check_circle</span> Réunion de chantier hebdomadaire
+                    </li>
+<li class="flex items-center gap-4 text-slate-800 font-bold">
+<span class="material-symbols-outlined text-accent">check_circle</span> Respect scrupuleux des normes
+                    </li>
+</ul>
+<button class="bg-midnight text-white font-black px-10 py-5 rounded-full shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-widest text-sm">
+                    Démarrer mon projet aujourd'hui
+                </button>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-midnight py-16 px-6 border-t border-white/10">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-12">
+<div class="flex items-center gap-4">
+<div class="bg-white p-2 rounded-lg">
+<span class="material-symbols-outlined text-midnight text-3xl">home_repair_service</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-white text-2xl font-black tracking-tight leading-none">RUIZ DIAZ</h2>
+<span class="text-[12px] font-bold tracking-[0.3em] text-accent">OBRAS SL</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-black uppercase tracking-widest text-xs">Contact</h4>
+<p class="text-white/60 text-sm">07 84 79 22 91</p>
+<p class="text-white/60 text-sm">ruizdiazobrassl@hotmail.com</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-black uppercase tracking-widest text-xs">Expertise</h4>
+<p class="text-white/60 text-sm">Paris &amp; Ile-de-France</p>
+<p class="text-white/60 text-sm">Tous Corps d'État</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-black uppercase tracking-widest text-xs">Légal</h4>
+<a class="text-white/60 text-sm hover:text-accent transition-colors" href="#">Mentions Légales</a>
+<a class="text-white/60 text-sm hover:text-accent transition-colors" href="#">Politique Cookies</a>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-white/40 text-xs font-medium tracking-wider">© 2024 RUIZ DIAZ OBRAS SL. TOUS DROITS RÉSERVÉS.</p>
+<div class="flex gap-8">
+<span class="text-white/40 text-[10px] font-bold tracking-widest uppercase">Garantie Décennale incluse</span>
+<span class="text-white/40 text-[10px] font-bold tracking-widest uppercase">Assurance RC Pro</span>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
