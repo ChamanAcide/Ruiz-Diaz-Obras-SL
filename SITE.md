@@ -6,10 +6,10 @@ Ruiz Diaz Obras SL is a high-end renovation and construction company operating i
 
 # Sitemap
 - [x] Home (`index.html`)
-- [ ] Réalisations (`realisations.html`)
-- [ ] Expertise/Services (`expertise.html`)
-- [ ] Contact (`contact.html`)
-- [ ] Mentions Légales (`mentions-legales.html`)
+- [x] Réalisations (`realisations.html`)
+- [x] Expertise/Services (`expertise.html`)
+- [x] Contact (`contact.html`)
+- [x] Mentions Légales (`mentions-legales.html`)
 
 # Roadmap
 1. Generate Réalisations page.
