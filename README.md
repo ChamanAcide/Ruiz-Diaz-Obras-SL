@@ -9,16 +9,16 @@ Site internet vitrine pour l'entreprise de rénovation haut de gamme **Ruiz Diaz
 - Design System : "Haute Façon" (Minimalisme de Luxe, Bleu Nuit & Or)
 
 ## Structure
-- `site/public/` : Contient l'ensemble des fichiers sources du site (HTML, JS, CSS, et assets).
-  - `index.html` : Page d'accueil
-  - `realisations.html` : Galerie des projets
-  - `expertise.html` : Détail des prestations
-  - `contact.html` : Formulaire de contact
-  - `mentions-legales.html` : Mentions légales
-  - `politique-confidentialite.html` : Politique RGPD et Cookies
+Les fichiers sources du site (HTML, JS, CSS, et assets) sont situés à la **racine** du projet pour une compatibilité maximale avec les hébergeurs (Hostinger, Vercel, etc.).
+- `index.html` : Page d'accueil
+- `realisations.html` : Galerie des projets
+- `expertise.html` : Détail des prestations
+- `contact.html` : Formulaire de contact
+- `mentions-legales.html` : Mentions légales
+- `politique-confidentialite.html` : Politique RGPD et Cookies
 
 ## Lancement local
 Pour visualiser le site localement, vous pouvez utiliser `live-server` :
 ```bash
-npx live-server site/public
+npx live-server .
 ```
