@@ -103,12 +103,42 @@
                 <a class="text-slate-600 hover:text-midnight font-bold text-sm uppercase tracking-wider transition-colors"
                     href="contact.html">Contact</a>
             </nav>
-            <a href="contact.html"
-                class="bg-accent hover:bg-accent-hover text-white font-black px-7 py-3 rounded-full transition-all shadow-lg hover:shadow-accent/20 text-sm uppercase tracking-widest inline-block">
-                Devis Gratuit
-            </a>
+            <div class="flex items-center gap-4">
+                <a href="contact.html"
+                    class="hidden md:inline-block bg-accent hover:bg-accent-hover text-white font-black px-7 py-3 rounded-full transition-all shadow-lg hover:shadow-accent/20 text-sm uppercase tracking-widest focus:outline-none">
+                    Devis Gratuit
+                </a>
+                <!-- Hamburger Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-midnight hover:text-accent focus:outline-none p-2"
+                    aria-label="Ouvrir le menu">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay"
+        class="fixed inset-0 z-[100] bg-white/95 backdrop-blur-xl opacity-0 invisible transition-all duration-300 flex flex-col pt-24 px-8 pb-8 overflow-y-auto">
+        <button id="mobile-menu-close-btn"
+            class="absolute top-6 right-6 text-midnight hover:text-accent focus:outline-none p-2"
+            aria-label="Fermer le menu">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <div class="flex-grow flex flex-col justify-center items-center gap-8 text-center">
+            <a href="index.html"
+                class="text-slate-500 hover:text-midnight text-2xl font-bold uppercase tracking-widest transition-colors">Accueil</a>
+            <a href="realisations.html"
+                class="text-midnight text-2xl font-black uppercase tracking-widest hover:text-accent transition-colors">Réalisations</a>
+            <a href="expertise.html"
+                class="text-slate-500 hover:text-midnight text-2xl font-bold uppercase tracking-widest transition-colors">Expertise</a>
+            <a href="contact.html"
+                class="text-slate-500 hover:text-midnight text-2xl font-bold uppercase tracking-widest transition-colors mb-6">Contact</a>
+            <a href="contact.html"
+                class="bg-accent text-white font-black px-10 py-4 rounded-full shadow-xl text-lg uppercase tracking-widest w-full max-w-xs focus:outline-none">Devis
+                Gratuit</a>
+        </div>
+    </div>
 
     <!-- Hero -->
     <section class="py-24 px-6 md:px-12 bg-white relative border-b border-slate-200">
@@ -117,7 +147,8 @@
                 class="bg-midnight text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] inline-block mb-6">
                 Portfolio
             </span>
-            <h1 class="text-midnight text-5xl md:text-7xl font-black leading-[1.05] mb-8">
+            <h1
+                class="text-midnight text-4xl sm:text-5xl md:text-7xl font-black leading-[1.1] md:leading-[1.05] mb-6 md:mb-8">
                 Nos <span class="text-accent">Réalisations</span>
             </h1>
             <p class="text-slate-500 text-xl max-w-3xl mx-auto leading-relaxed">
@@ -286,6 +317,7 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/mobile-menu.js"></script>
 </body>
 
 </html>
