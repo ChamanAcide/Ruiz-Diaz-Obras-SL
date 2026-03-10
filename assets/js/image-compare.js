@@ -25,6 +25,8 @@ class ImageCompare extends HTMLElement {
             
             if (i === 0) {
                 this.createLabel(img, 'left');
+            } else {
+                this.createLabel(img, 'center');
             }
             
             // initial positions: left-to-right distribution
@@ -118,12 +120,15 @@ class ImageCompare extends HTMLElement {
         const labelText = img.dataset.label;
         if (!labelText) return;
         const label = document.createElement('div');
-        label.className = 'absolute top-4 sm:top-6 bg-midnight/85 backdrop-blur-md text-white border border-white/10 px-4 py-1.5 sm:py-2 rounded-full text-[9px] sm:text-[11px] font-bold tracking-[0.2em] uppercase z-20 pointer-events-none shadow-[0_8px_30px_rgb(0,0,0,0.12)]';
+        label.className = 'absolute top-4 sm:top-6 bg-midnight/85 backdrop-blur-md text-white border border-white/10 px-4 py-1.5 sm:py-2 rounded-full text-[9px] sm:text-[11px] font-bold tracking-[0.2em] uppercase z-20 pointer-events-none shadow-[0_8px_30px_rgb(0,0,0,0.12)] whitespace-nowrap';
         label.textContent = labelText;
         if (position === 'left') {
             label.style.left = '1rem';
-        } else {
+        } else if (position === 'right') {
             label.style.right = '1rem';
+        } else {
+            label.style.left = '50%';
+            label.style.transform = 'translateX(-50%)';
         }
         this.appendChild(label);
     }
