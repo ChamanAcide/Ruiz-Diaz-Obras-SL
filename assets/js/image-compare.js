@@ -40,8 +40,8 @@ class ImageCompare extends HTMLElement {
             handle.style.touchAction = 'none';
             
             const handleBtn = document.createElement('div');
-            handleBtn.className = 'absolute w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md';
-            handleBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0a192f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18L2 12l6-6M16 6l6 6-6 6"/></svg>';
+            handleBtn.className = 'absolute w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.25)] ring-4 ring-white/50 border border-slate-200 transition-transform active:scale-95';
+            handleBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a192f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></svg>';
             handleBtn.style.userSelect = 'none';
             handleBtn.style.pointerEvents = 'none';
             
@@ -118,8 +118,7 @@ class ImageCompare extends HTMLElement {
         const labelText = img.dataset.label;
         if (!labelText) return;
         const label = document.createElement('div');
-        // add blur-reveal and soft-blue-shadow classes from the project custom classes
-        label.className = 'absolute top-4 sm:top-6 bg-white/90 text-midnight border border-white/20 px-3 sm:px-4 py-1 sm:py-2 rounded-lg text-[10px] sm:text-xs font-black tracking-[0.2em] uppercase z-20 pointer-events-none blur-reveal soft-blue-shadow';
+        label.className = 'absolute top-4 sm:top-6 bg-midnight/85 backdrop-blur-md text-white border border-white/10 px-4 py-1.5 sm:py-2 rounded-full text-[9px] sm:text-[11px] font-bold tracking-[0.2em] uppercase z-20 pointer-events-none shadow-[0_8px_30px_rgb(0,0,0,0.12)]';
         label.textContent = labelText;
         if (position === 'left') {
             label.style.left = '1rem';
