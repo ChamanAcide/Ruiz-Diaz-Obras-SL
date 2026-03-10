@@ -43,7 +43,7 @@ class ImageCompare extends HTMLElement {
         const baseImg = this.images[this.images.length - 1];
         baseImg.className = 'absolute top-0 left-0 w-full h-full object-cover pointer-events-none';
         this.appendChild(baseImg);
-        this.createLabel(baseImg, 'right');
+        baseImg.labelElement = this.createLabel(baseImg, 'right');
         
         // Render overlays
         for (let i = 0; i < numOverlays; i++) {
@@ -53,9 +53,9 @@ class ImageCompare extends HTMLElement {
             this.appendChild(img);
             
             if (i === 0) {
-                this.createLabel(img, 'left');
+                img.labelElement = this.createLabel(img, 'left');
             } else {
-                this.createLabel(img, 'center');
+                img.labelElement = this.createLabel(img, 'center', i, numOverlays);
             }
             
             // initial positions: left-to-right distribution
@@ -153,23 +153,69 @@ class ImageCompare extends HTMLElement {
             obj.img.style.clipPath = `polygon(0 0, ${obj.pos}% 0, ${obj.pos}% 100%, 0 100%)`;
             obj.img.style.webkitClipPath = `polygon(0 0, ${obj.pos}% 0, ${obj.pos}% 100%, 0 100%)`;
         });
+        this.updateActiveLabel();
     }
     
-    createLabel(img, position) {
-        const labelText = img.dataset.label;
-        if (!labelText) return;
-        const label = document.createElement('div');
-        label.className = 'absolute top-4 sm:top-6 bg-midnight/85 backdrop-blur-md text-white border border-white/10 px-4 py-1.5 sm:py-2 rounded-full text-[9px] sm:text-[11px] font-bold tracking-[0.2em] uppercase z-20 pointer-events-none shadow-[0_8px_30px_rgb(0,0,0,0.12)] whitespace-nowrap';
-        label.textContent = labelText;
-        if (position === 'left') {
-            label.style.left = '1rem';
-        } else if (position === 'right') {
-            label.style.right = '1rem';
-        } else {
-            label.style.left = '50%';
-            label.style.transform = 'translateX(-50%)';
+    updateActiveLabel() {
+        const numOverlays = this.images.length - 1;
+        const widths = [];
+        
+        for (let i = 0; i <= numOverlays; i++) {
+            const startX = i === 0 ? 0 : this.handles.find(h => h.index === i - 1).pos;
+            const endX = i === numOverlays ? 100 : this.handles.find(h => h.index === i).pos;
+            widths.push({ index: i, width: endX - startX, img: this.images[i] });
         }
-        this.appendChild(label);
+        
+        let maxIndex = 0;
+        let maxWidth = -1;
+        widths.forEach(item => {
+            if (item.width > maxWidth) {
+                maxWidth = item.width;
+                maxIndex = item.index;
+            }
+        });
+        
+        this.images.forEach((img, idx) => {
+            if (!img.labelElement) return;
+            if (idx === maxIndex) {
+                img.labelElement.className = 'px-4 py-1.5 sm:py-2 rounded-full text-[9px] sm:text-[11px] font-bold tracking-[0.2em] uppercase whitespace-nowrap border transition-all duration-300 backdrop-blur-md bg-accent text-white border-accent scale-105 opacity-100 shadow-[0_4px_20px_rgba(212,175,55,0.4)]';
+            } else {
+                img.labelElement.className = 'px-4 py-1.5 sm:py-2 rounded-full text-[9px] sm:text-[11px] font-bold tracking-[0.2em] uppercase whitespace-nowrap border transition-all duration-300 backdrop-blur-md bg-midnight/85 text-white border-white/10 scale-90 opacity-60 shadow-[0_8px_30px_rgb(0,0,0,0.12)]';
+            }
+        });
+    }
+    
+    createLabel(img, position, index, numOverlays) {
+        const labelText = img.dataset.label;
+        if (!labelText) return null;
+        
+        const wrapper = document.createElement('div');
+        wrapper.className = 'absolute top-4 sm:top-6 z-20 pointer-events-none transition-all duration-300';
+        
+        const label = document.createElement('div');
+        label.className = 'px-4 py-1.5 sm:py-2 rounded-full text-[9px] sm:text-[11px] font-bold tracking-[0.2em] uppercase whitespace-nowrap border transition-all duration-300 backdrop-blur-md bg-midnight/85 text-white border-white/10 scale-90 opacity-60 shadow-[0_8px_30px_rgb(0,0,0,0.12)]';
+        label.textContent = labelText;
+        
+        wrapper.appendChild(label);
+
+        if (position === 'left') {
+            wrapper.style.left = '1rem';
+            label.style.transformOrigin = 'left top';
+        } else if (position === 'right') {
+            wrapper.style.right = '1rem';
+            label.style.transformOrigin = 'right top';
+        } else {
+            if (numOverlays > 1 && index !== undefined) {
+                const pct = (index / numOverlays) * 100;
+                wrapper.style.left = `${pct}%`;
+            } else {
+                wrapper.style.left = '50%';
+            }
+            wrapper.style.transform = 'translateX(-50%)';
+            label.style.transformOrigin = 'center top';
+        }
+        this.appendChild(wrapper);
+        return label;
     }
 }
 
