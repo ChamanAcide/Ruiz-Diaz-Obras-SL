@@ -62,20 +62,24 @@ class ImageCompare extends HTMLElement {
             const initPos = ((i + 1) / (numOverlays + 1)) * 100;
             
             const handle = document.createElement('div');
-            handle.className = 'absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize flex items-center justify-center';
+            // Expanded hit area (w-12 is 48px) to make grabbing easy on mobile
+            handle.className = 'absolute top-0 bottom-0 w-12 cursor-ew-resize flex items-center justify-center';
             handle.style.left = `${initPos}%`;
             handle.style.transform = 'translateX(-50%)';
             handle.style.zIndex = 10 + numOverlays - i;
-            handle.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
             handle.style.userSelect = 'none';
             handle.style.touchAction = 'none';
             
+            const line = document.createElement('div');
+            line.className = 'absolute top-0 bottom-0 w-1 bg-white pointer-events-none';
+            line.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
+            
             const handleBtn = document.createElement('div');
-            handleBtn.className = 'absolute w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.25)] ring-4 ring-white/50 border border-slate-200 transition-transform active:scale-95';
+            handleBtn.className = 'absolute z-10 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.25)] ring-4 ring-white/50 border border-slate-200 transition-transform active:scale-95 pointer-events-none';
             handleBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a192f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></svg>';
             handleBtn.style.userSelect = 'none';
-            handleBtn.style.pointerEvents = 'none';
             
+            handle.appendChild(line);
             handle.appendChild(handleBtn);
             this.appendChild(handle);
             
