@@ -1,8 +1,37 @@
 class ImageCompare extends HTMLElement {
     connectedCallback() {
-        this.images = Array.from(this.querySelectorAll('img'));
-        if (this.images.length < 2) return;
-        
+        // On mobile/slow connections, Custom Elements can be upgraded before their innerHTML is fully parsed.
+        // We wait a tick or for DOMContentLoaded to ensure children (<img>) are available.
+        const init = () => {
+            if (this.initialized) return;
+            this.images = Array.from(this.querySelectorAll('img'));
+            
+            if (this.images.length < 2) {
+                // If still not enough images, maybe they are being injected later or are not parsed yet
+                setTimeout(() => {
+                    if (this.initialized) return;
+                    this.images = Array.from(this.querySelectorAll('img'));
+                    if (this.images.length >= 2) {
+                        this.initialized = true;
+                        this.setup();
+                    }
+                }, 150);
+                return;
+            }
+            
+            this.initialized = true;
+            this.setup();
+        };
+
+        if (document.readyState === 'loading') {
+            window.addEventListener('DOMContentLoaded', init);
+        } else {
+            // Use requestAnimationFrame to let the parser finish the current block
+            requestAnimationFrame(init);
+        }
+    }
+    
+    setup() {
         this.innerHTML = '';
         this.classList.add('block', 'relative', 'overflow-hidden', 'rounded-3xl', 'shadow-2xl', 'w-full', 'bg-slate-200');
         this.style.aspectRatio = '16/10'; 
@@ -59,7 +88,11 @@ class ImageCompare extends HTMLElement {
         
         const attachDrag = (handleObj) => {
             const down = (e) => {
-                e.preventDefault();
+                if (e.type === 'touchstart' && e.cancelable) {
+                    e.preventDefault();
+                } else if (e.type === 'mousedown') {
+                    e.preventDefault();
+                }
                 activeHandle = handleObj;
             };
             handleObj.handle.addEventListener('mousedown', down);
@@ -107,12 +140,14 @@ class ImageCompare extends HTMLElement {
         document.addEventListener('touchmove', move, { passive: false });
         document.addEventListener('mouseup', up);
         document.addEventListener('touchend', up);
+        document.addEventListener('touchcancel', up);
     }
     
     updateClips() {
         this.handles.forEach(obj => {
             obj.handle.style.left = `${obj.pos}%`;
             obj.img.style.clipPath = `polygon(0 0, ${obj.pos}% 0, ${obj.pos}% 100%, 0 100%)`;
+            obj.img.style.webkitClipPath = `polygon(0 0, ${obj.pos}% 0, ${obj.pos}% 100%, 0 100%)`;
         });
     }
     
