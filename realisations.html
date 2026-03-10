@@ -162,107 +162,125 @@
     <!-- Bento Grid Gallery -->
     <section class="py-24 bg-background-light">
         <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
-
-                <!-- Project 1 (Large) -->
-                <div class="relative group rounded-3xl overflow-hidden shadow-lg lg:col-span-2 lg:row-span-2">
-                    <img fetchpriority="high" decoding="async" src="assets/realisations/projet_parisien_v2.jpg"
-                        alt="Rénovation Haussmannien"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-midnight/90 via-midnight/30 to-transparent">
-                    </div>
-                    <div class="absolute bottom-0 left-0 p-8 w-full">
-                        <span class="text-accent font-bold tracking-widest text-xs uppercase block mb-2">Rénovation
-                            Intégrale</span>
-                        <h3 class="text-white text-3xl font-black mb-2">Projet Résidentiel Parisien</h3>
-                        <p class="text-white/80 line-clamp-2">Transformation complète d'un espace de vie avec des
-                            finitions haut de gamme.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Project 1 -->
+                <div class="flex flex-col gap-4 group">
+                    <image-compare>
+                        <img loading="lazy" src="assets/img/realisations/realisation-1-avant.webp" data-label="Avant">
+                        <img loading="lazy" src="assets/img/realisations/realisation-1-apres.webp" data-label="Après">
+                    </image-compare>
+                    <div class="px-2">
+                        <span class="text-accent font-bold tracking-widest text-[10px] uppercase block mb-1">Menuiserie</span>
+                        <h3 class="text-midnight text-xl font-black">Rénovation Porte & Fenêtres</h3>
+                        <p class="text-slate-500 text-sm mt-1 leading-relaxed">Modernisation des ouvertures avec remplacement intégral de la menuiserie pour un rendu lumineux.</p>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="relative group rounded-3xl overflow-hidden shadow-lg">
-                    <img loading="lazy" decoding="async" src="assets/realisations/cuisine_luxe.jpg"
-                        alt="Cuisine sur mesure"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-midnight/90 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6 w-full">
-                        <span
-                            class="text-accent font-bold tracking-widest text-xs uppercase block mb-1">Aménagement</span>
-                        <h3 class="text-white text-xl font-bold">Cuisine & Pièce de Vie</h3>
+                <div class="flex flex-col gap-4 group">
+                    <image-compare>
+                        <img loading="lazy" src="assets/img/realisations/realisation-2-avant.webp" data-label="Avant">
+                        <img loading="lazy" src="assets/img/realisations/realisation-2-apres.webp" data-label="Après">
+                    </image-compare>
+                    <div class="px-2">
+                        <span class="text-accent font-bold tracking-widest text-[10px] uppercase block mb-1">Démolition & Reprise</span>
+                        <h3 class="text-midnight text-xl font-black">Transformation d'Espace</h3>
+                        <p class="text-slate-500 text-sm mt-1 leading-relaxed">Abattage de cloisons et redéfinition totale des volumes pour un intérieur aéré et repensé.</p>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="relative group rounded-3xl overflow-hidden shadow-lg">
-                    <img loading="lazy" decoding="async"
-                        src="assets/realisations/1d3cc3a5-6f3a-42ef-831d-0293a1c6b3a6.jpg" alt="Salle de bain luxe"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-midnight/90 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6 w-full">
-                        <span
-                            class="text-accent font-bold tracking-widest text-xs uppercase block mb-1">Rénovation</span>
-                        <h3 class="text-white text-xl font-bold">Espace Bain & Détente</h3>
+                <div class="flex flex-col gap-4 group">
+                    <image-compare>
+                        <img loading="lazy" src="assets/img/realisations/realisation-3-avant.webp" data-label="Avant">
+                        <img loading="lazy" src="assets/img/realisations/realisation-3-apres-1.webp" data-label="Étape 1">
+                        <img loading="lazy" src="assets/img/realisations/realisation-3-apres-2.webp" data-label="Après">
+                    </image-compare>
+                    <div class="px-2">
+                        <span class="text-accent font-bold tracking-widest text-[10px] uppercase block mb-1">Gros Œuvre</span>
+                        <h3 class="text-midnight text-xl font-black">Aménagement Structuré</h3>
+                        <p class="text-slate-500 text-sm mt-1 leading-relaxed">Chantier d'envergure illustré en 3 phases pour révéler l'évolution technique et esthétique.</p>
                     </div>
                 </div>
 
-                <!-- Project 4 (Large) -->
-                <div class="relative group rounded-3xl overflow-hidden shadow-lg lg:col-span-2">
-                    <img loading="lazy" decoding="async" src="assets/realisations/espace_contemporain_v2.jpg"
-                        alt="Espace de vie contemporain"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-midnight/90 via-midnight/20 to-transparent">
-                    </div>
-                    <div class="absolute bottom-0 left-0 p-8 w-full">
-                        <span class="text-accent font-bold tracking-widest text-xs uppercase block mb-2">Rénovation
-                            Totale</span>
-                        <h3 class="text-white text-3xl font-black">Espaces Contemporains</h3>
-                        <p class="text-white/80 line-clamp-2">Luminosité et matériaux nobles pour un intérieur repensé
-                            de A à Z.</p>
+                <!-- Project 4 -->
+                <div class="flex flex-col gap-4 group">
+                    <image-compare>
+                        <img loading="lazy" src="assets/img/realisations/realisation-4-avant.webp" data-label="Avant">
+                        <img loading="lazy" src="assets/img/realisations/realisation-4-apres.webp" data-label="Après">
+                    </image-compare>
+                    <div class="px-2">
+                        <span class="text-accent font-bold tracking-widest text-[10px] uppercase block mb-1">Cuisine</span>
+                        <h3 class="text-midnight text-xl font-black">Création Espace Culinaire</h3>
+                        <p class="text-slate-500 text-sm mt-1 leading-relaxed">Démantèlement de l'ancien agencement pour laisser place à une cuisine moderne et hyper fonctionnelle.</p>
                     </div>
                 </div>
 
                 <!-- Project 5 -->
-                <div class="relative group rounded-3xl overflow-hidden shadow-lg">
-                    <img loading="lazy" decoding="async" src="assets/realisations/chambre_suite_luxe.jpg"
-                        alt="Création de suite parentale"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-midnight/90 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6 w-full">
-                        <span
-                            class="text-accent font-bold tracking-widest text-xs uppercase block mb-1">Agencement</span>
-                        <h3 class="text-white text-xl font-bold">Chambres & Suites</h3>
+                <div class="flex flex-col gap-4 group">
+                    <image-compare>
+                        <img loading="lazy" src="assets/img/realisations/realisation-5-avant.webp" data-label="Avant">
+                        <img loading="lazy" src="assets/img/realisations/realisation-5-apres-1.webp" data-label="Étape 1">
+                        <img loading="lazy" src="assets/img/realisations/realisation-5-apres-2.webp" data-label="Après">
+                    </image-compare>
+                    <div class="px-2">
+                        <span class="text-accent font-bold tracking-widest text-[10px] uppercase block mb-1">Salle de Bain</span>
+                        <h3 class="text-midnight text-xl font-black">Restructuration Pièce d'Eau</h3>
+                        <p class="text-slate-500 text-sm mt-1 leading-relaxed">Reprise complète de la plomberie et réagencement progressif vers une salle d'eau design.</p>
                     </div>
                 </div>
 
                 <!-- Project 6 -->
-                <div class="relative group rounded-3xl overflow-hidden shadow-lg">
-                    <img loading="lazy" decoding="async"
-                        src="assets/realisations/30c04af1-4646-4bef-981f-d581a143b643.jpg" alt="Détails architecturaux"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-midnight/90 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6 w-full">
-                        <span
-                            class="text-accent font-bold tracking-widest text-xs uppercase block mb-1">Finitions</span>
-                        <h3 class="text-white text-xl font-bold">Détails Haute Couture</h3>
+                <div class="flex flex-col gap-4 group">
+                    <image-compare>
+                        <img loading="lazy" src="assets/img/realisations/realisation-6-avant.webp" data-label="Avant">
+                        <img loading="lazy" src="assets/img/realisations/realisation-6-apres.webp" data-label="Après">
+                    </image-compare>
+                    <div class="px-2">
+                        <span class="text-accent font-bold tracking-widest text-[10px] uppercase block mb-1">Maçonnerie</span>
+                        <h3 class="text-midnight text-xl font-black">Consolidation d'Ouvrage</h3>
+                        <p class="text-slate-500 text-sm mt-1 leading-relaxed">Intervention lourde sur la structure des murs pour assainir et consolider l'ensemble.</p>
                     </div>
                 </div>
 
                 <!-- Project 7 -->
-                <div class="relative group rounded-3xl overflow-hidden shadow-lg lg:col-span-2">
-                    <img loading="lazy" decoding="async"
-                        src="assets/realisations/670b06c5-2bc0-4aae-9f67-6a756c728f70.jpg"
-                        alt="Menuiserie et espaces de vie"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-midnight/90 via-midnight/20 to-transparent">
-                    </div>
-                    <div class="absolute bottom-0 left-0 p-8 w-full">
-                        <span
-                            class="text-accent font-bold tracking-widest text-xs uppercase block mb-2">Sur-Mesure</span>
-                        <h3 class="text-white text-3xl font-black">Agencement & Menuiserie</h3>
+                <div class="flex flex-col gap-4 group">
+                    <image-compare>
+                        <img loading="lazy" src="assets/img/realisations/realisation-7-avant.webp" data-label="Avant">
+                        <img loading="lazy" src="assets/img/realisations/realisation-7-apres.webp" data-label="Après">
+                    </image-compare>
+                    <div class="px-2">
+                        <span class="text-accent font-bold tracking-widest text-[10px] uppercase block mb-1">Couloir & Sol</span>
+                        <h3 class="text-midnight text-xl font-black">Réfection des Passages</h3>
+                        <p class="text-slate-500 text-sm mt-1 leading-relaxed">Remplacement de revêtements de sol vieillissants et lissage des murs pour une finition haut standing.</p>
                     </div>
                 </div>
 
+                <!-- Project 8 -->
+                <div class="flex flex-col gap-4 group">
+                    <image-compare>
+                        <img loading="lazy" src="assets/img/realisations/realisation-8-avant.webp" data-label="Avant">
+                        <img loading="lazy" src="assets/img/realisations/realisation-8-apres.webp" data-label="Après">
+                    </image-compare>
+                    <div class="px-2">
+                        <span class="text-accent font-bold tracking-widest text-[10px] uppercase block mb-1">Agencement</span>
+                        <h3 class="text-midnight text-xl font-black">Transformation Intérieure</h3>
+                        <p class="text-slate-500 text-sm mt-1 leading-relaxed">Création de nouvelles cloisons, électricité et plâtrerie pour redéfinir les pièces à vivre.</p>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="flex flex-col gap-4 group">
+                    <image-compare>
+                        <img loading="lazy" src="assets/img/realisations/realisation-9-avant.webp" data-label="Avant">
+                        <img loading="lazy" src="assets/img/realisations/realisation-9-apres.webp" data-label="Après">
+                    </image-compare>
+                    <div class="px-2">
+                        <span class="text-accent font-bold tracking-widest text-[10px] uppercase block mb-1">Finitions Uniques</span>
+                        <h3 class="text-midnight text-xl font-black">Luxe & Sur-Mesure</h3>
+                        <p class="text-slate-500 text-sm mt-1 leading-relaxed">Aperçu du travail de haute précision sur l'infrastructure initiale pour des résultats impeccables.</p>
+                    </div>
+                </div>
 
             </div>
 
@@ -319,6 +337,7 @@
         </div>
     </footer>
     <script src="assets/js/mobile-menu.js?v=3"></script>
+    <script src="assets/js/image-compare.js" defer></script>
 </body>
 
 </html>
