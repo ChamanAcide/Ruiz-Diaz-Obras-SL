@@ -4,8 +4,8 @@ class ImageCompare extends HTMLElement {
         if (this.images.length < 2) return;
         
         this.innerHTML = '';
-        this.classList.add('block', 'relative', 'overflow-hidden', 'rounded-3xl', 'shadow-lg', 'w-full', 'bg-slate-200');
-        this.style.aspectRatio = '4/3'; 
+        this.classList.add('block', 'relative', 'overflow-hidden', 'rounded-3xl', 'shadow-2xl', 'w-full', 'bg-slate-200');
+        this.style.aspectRatio = '16/10'; 
         
         this.handles = [];
         const numOverlays = this.images.length - 1;
